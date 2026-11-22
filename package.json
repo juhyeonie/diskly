@@ -1,0 +1,26 @@
+{
+  "name": "diskly",
+  "version": "2.0.0",
+  "description": "Diskly - see what is using your disk space",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && cross-env DISKLY_DEV=1 electron .\"",
+    "build": "vite build",
+    "start": "vite build && electron .",
+    "preview:web": "vite"
+  },
+  "dependencies": {
+    "lucide-react": "^0.454.0",
+    "motion": "^11.11.17",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^33.0.0",
+    "vite": "^5.4.0",
+    "wait-on": "^8.0.0"
+  }
+}
